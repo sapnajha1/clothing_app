@@ -8,7 +8,7 @@ import 'package:clothing_app/const/color.dart';
 import 'package:flutter/widgets.dart';
 import 'package:clothing_app/widget/customappbar.dart';
 
-import '../function_services/model_function.dart';
+// import '../function_services/model_function.dart';
 import '../model/item_model.dart';
 import '../model/model.dart';
 import 'dashboard/detailpage.dart';
@@ -28,6 +28,8 @@ class house extends StatefulWidget {
 class _houseState extends State<house> {
 
   var arr1=[cont1,cont1,cont1,cont1,cont1,cont1];
+  bool isFavorite = false;
+  // bool isFavorite = false;
   // final List<Product> _items=[];
 
 
@@ -74,10 +76,10 @@ class _houseState extends State<house> {
                   child: searchbar("Search product",Icons.abc),),
 
                 SizedBox(height: 30,),
-                Stack(children: [Container(height: 200,width: 500,decoration: BoxDecoration(color: Colors.black,borderRadius: BorderRadius.circular(40)),
-                    child: Row(mainAxisAlignment:MainAxisAlignment.spaceAround,children:[Padding(padding: EdgeInsets.symmetric(horizontal: 20,vertical: 30),
+                Stack(children: [Container(height: 200,width:  MediaQuery.of(context).size.width *0.9 ,decoration: BoxDecoration(color: Colors.black,borderRadius: BorderRadius.circular(40)),
+                    child: Row(mainAxisAlignment:MainAxisAlignment.spaceEvenly,children:[Padding(padding: EdgeInsets.symmetric(horizontal: 20,vertical: 30),
                         child:discount("Last Discount","Up to 70%","Shop Now & Get Free","shipping to your House")),
-                      ClipRRect(child:Image.asset("images/priya.jpg",width:150,height: 200,fit: BoxFit.fill,),
+                      ClipRRect(child:Image.asset("images/priya.jpg",width: MediaQuery.of(context).size.width * 0.4,height: 200,fit: BoxFit.fill,),
                         borderRadius: BorderRadius.only(bottomRight: Radius.circular(32),topRight: Radius.circular(32)),),])),
                 ],),
 
@@ -176,7 +178,40 @@ class gridState extends State<grid> {
 
                           Row(mainAxisAlignment: MainAxisAlignment.start,
                             children: [
-                              IconButton(onPressed: () {},
+                              IconButton(
+                              //   onTap: (){
+                              //     //handle
+                              //     setState(() {
+                              //       // Toggle the favorite status
+                              //       isFavorite = !isFavorite;
+                              //     });
+                              //   },
+                              //   child: Icon(
+                              //     isFavorite ? Icons.favorite : Icons.favorite_border,
+                              //     color: isFavorite ? Colors.red : Colors.white,
+                              //     // size: 50,
+                              //   ),
+                              // ),
+
+
+                              //   onPressed: () {
+                              //     setState(() {
+                              //       _isFavoriteList[index] = !_isFavoriteList[index];
+                              //     });
+                              //   },
+                              //   icon: Icon(
+                              //     CupertinoIcons.heart,
+                              //     color: _isFavoriteList[index] ? Colors.red : Colors.grey,
+                              //   ),
+                              // ),
+                              // IconButton(
+                              //   onPressed: () {},
+                              //   icon: Icon(
+                              //     CupertinoIcons.shopping_cart,
+                              //   ),
+                              // ),
+
+                                  onPressed: () {},
                                   icon: Icon(
                                     CupertinoIcons.heart,
                                   )),
@@ -199,6 +234,32 @@ class gridState extends State<grid> {
   }
 }
 
+
+
+class RoundedContainerWithIcon extends StatelessWidget {
+  final IconData icon;
+
+  const RoundedContainerWithIcon({super.key, required this.icon});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 50,
+      height: 50,
+      decoration: BoxDecoration(
+        color: const Color(0XFF9DB2BF),
+        borderRadius: BorderRadius.circular(12),
+      ),
+      child: Center(
+        child: Icon(
+          icon,
+          size: 30,
+          color: Colors.black, // Change the icon color as needed
+        ),
+      ),
+    );
+  }
+}
 
 
 
