@@ -179,38 +179,6 @@ class gridState extends State<grid> {
                           Row(mainAxisAlignment: MainAxisAlignment.start,
                             children: [
                               IconButton(
-                              //   onTap: (){
-                              //     //handle
-                              //     setState(() {
-                              //       // Toggle the favorite status
-                              //       isFavorite = !isFavorite;
-                              //     });
-                              //   },
-                              //   child: Icon(
-                              //     isFavorite ? Icons.favorite : Icons.favorite_border,
-                              //     color: isFavorite ? Colors.red : Colors.white,
-                              //     // size: 50,
-                              //   ),
-                              // ),
-
-
-                              //   onPressed: () {
-                              //     setState(() {
-                              //       _isFavoriteList[index] = !_isFavoriteList[index];
-                              //     });
-                              //   },
-                              //   icon: Icon(
-                              //     CupertinoIcons.heart,
-                              //     color: _isFavoriteList[index] ? Colors.red : Colors.grey,
-                              //   ),
-                              // ),
-                              // IconButton(
-                              //   onPressed: () {},
-                              //   icon: Icon(
-                              //     CupertinoIcons.shopping_cart,
-                              //   ),
-                              // ),
-
                                   onPressed: () {},
                                   icon: Icon(
                                     CupertinoIcons.heart,
